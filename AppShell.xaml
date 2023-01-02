@@ -4,11 +4,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Proiect1"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:Proiect1.Views"
+    xmlns:models="clr-namespace:Proiect1.Models">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <ShellContent Title="Home Page" ContentTemplate="{DataTemplate local:GymPage}" />
+        <ShellContent Title="Borrowings" ContentTemplate="{DataTemplate views:Borrowings}" />
+        <ShellContent Title="Categories" ContentTemplate="{DataTemplate views:Categories}" />
+        <ShellContent Title="Clients" ContentTemplate="{DataTemplate views:Clients}" />
+        <ShellContent Title="Gyms" ContentTemplate="{DataTemplate views:Gyms}" />
+        <ShellContent Title="Trainers" ContentTemplate="{DataTemplate views:Trainers}" />
+    </TabBar>
 </Shell>

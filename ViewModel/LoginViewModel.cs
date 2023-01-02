@@ -37,7 +37,7 @@ namespace Proiect1.ViewModel
             {
                 if (string.Equals(loginData.Password, Password))
                 {
-                    await Navigation.PushModalAsync(new GymPage());
+                    await Navigation.PushModalAsync(new AppShell());
                 }
                 else
                 {
