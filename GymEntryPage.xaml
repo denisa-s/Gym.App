@@ -6,11 +6,22 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add a gym" Clicked="OnGymInfoAddedClicked" />
     </ContentPage.ToolbarItems>
-    <ListView x:Name="listView" Margin="20" ItemSelected="OnListViewItemSelected">
+    <ListView x:Name="listView" Margin="30" ItemSelected="OnListViewItemSelected" HorizontalScrollBarVisibility="Always">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding GymName}" />
+                <ViewCell>
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="{Binding GymName}"/>
+                            <Label Text="{Binding GymAddress}" />
+                            <Label Text="{Binding GymPrice}"/>
+                            <Label Text="{Binding GymReview}" />
+                            <Label Text="{Binding GymPhone}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
+
     </ListView>
 </ContentPage>

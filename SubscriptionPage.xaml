@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proiect1.SubscriptionPage"
              Title="Subscription Page">
-    <VerticalStackLayout Spacing="10" Margin="10">
-        <StackLayout Margin="20">
-            <Editor Placeholder="Enter the id of the client" Text="{Binding ClientID}"
-                    HeightRequest="100" />
+    <VerticalStackLayout Spacing="1" Margin="5">
+        <StackLayout Margin="10" >
+            <Editor Placeholder="Enter the client ID" Text="{Binding ClientID}"
+                    HeightRequest="20"/>
+            <Editor Placeholder="Enter the gym ID" Text="{Binding GymID}"
+                    HeightRequest="20" />
+            <Editor Placeholder="Enter the subscription expiration date" Text="{Binding ReturnDate}"
+                    HeightRequest="20" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />

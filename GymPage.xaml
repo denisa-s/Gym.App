@@ -3,18 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proiect1.GymPage"
              Title="Gym Page">
-    <VerticalStackLayout Spacing="10" Margin="10">
-        <StackLayout Margin="20">
-        <Editor Placeholder="Enter the name of the gym" Text="{Binding GymName}"
-                    HeightRequest="100" />
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Button Text="Save" Clicked="OnSaveButtonClicked" />
-            <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonClicked"/>
-        </Grid>
-    </StackLayout>
-        </VerticalStackLayout>
+    <VerticalStackLayout Spacing="1" Margin="5">
+        <StackLayout Margin="10" >
+            <Editor Placeholder="Enter the name of the gym" Text="{Binding GymName}"
+                    HeightRequest="20"/>
+            <Editor Placeholder="Enter the address of the gym" Text="{Binding GymAddress}"
+                    HeightRequest="20" />
+            <Editor Placeholder="Enter the basic price of the gym" Text="{Binding GymPrice}"
+                    HeightRequest="20" />
+            <Editor Placeholder="Enter the review score of the gym" Text="{Binding GymReview}"
+                    HeightRequest="20" />
+            <Editor Placeholder="Enter the phone number of the gym" Text="{Binding GymPhone}"
+                    HeightRequest="20" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+        </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
