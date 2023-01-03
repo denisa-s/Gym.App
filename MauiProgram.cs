@@ -19,8 +19,7 @@ public static class MauiProgram
 		builder.Services.AddSingleton<LoginPage>();
         builder.Services.AddSingleton<Trainers>();
         builder.Services.AddSingleton<Clients>();
-
-        builder.Services.AddSingleton<Gyms>();
+        builder.Services.AddSingleton<GymPage>();
         return builder.Build();
 	}
 }

@@ -1,9 +1,10 @@
 using Proiect1.Models;
-namespace Proiect1.Views;
 
-public partial class Gyms : ContentPage
+namespace Proiect1;
+
+public partial class GymPage : ContentPage
 {
-	public Gyms()
+	public GymPage()
 	{
 		InitializeComponent();
 	}
@@ -20,3 +21,5 @@ public partial class Gyms : ContentPage
         await Navigation.PopAsync();
     }
 }
+
+ 

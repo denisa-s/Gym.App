@@ -9,7 +9,7 @@
     <ListView x:Name="listView" Margin="20" ItemSelected="OnListViewItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Description}" Detail="{Binding Date}" />
+                <TextCell Text="{Binding GymName}" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

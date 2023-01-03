@@ -6,13 +6,6 @@ using System;
 using System.IO;
 public partial class App : Application
 {
-    
-    public App()
-    {
-        InitializeComponent();
-
-        MainPage = new LoginPage();
-    }
     static LoginDatabase database;
 
     // Create the database connection as a singleton.
@@ -27,4 +20,12 @@ public partial class App : Application
             return database;
         }
     }
+
+    public App()
+    {
+        InitializeComponent();
+
+        MainPage = new LoginPage();
+    }
+    
 }

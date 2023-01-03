@@ -16,7 +16,7 @@ public partial class GymEntryPage : ContentPage
     }
     async void OnGymInfoAddedClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Gyms
+        await Navigation.PushAsync(new GymPage
         {
             BindingContext = new GymInfo()
         });
@@ -25,7 +25,7 @@ public partial class GymEntryPage : ContentPage
     {
         if (e.SelectedItem != null)
         {
-            await Navigation.PushAsync(new Gyms
+            await Navigation.PushAsync(new GymPage
             {
                 BindingContext = e.SelectedItem as GymInfo
             });
