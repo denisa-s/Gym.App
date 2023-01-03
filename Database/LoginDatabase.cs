@@ -16,6 +16,7 @@ namespace Proiect1.Database
             database = new SQLiteAsyncConnection(dbPath);
             database.CreateTableAsync<LoginModel>().Wait();
             database.CreateTableAsync<GymInfo>().Wait();
+            database.CreateTableAsync<TrainerInfo>().Wait();
         }
 
         public Task<LoginModel> GetLoginDataAsync(string userName)
@@ -54,5 +55,32 @@ namespace Proiect1.Database
         {
             return database.DeleteAsync(slist);
         }
+
+        public Task<List<TrainerInfo>> GetTrainerInfosAsync()
+        {
+            return database.Table<TrainerInfo>().ToListAsync();
+        }
+        public Task<TrainerInfo> GetTrainerInfoAsync(int id)
+        {
+            return database.Table<TrainerInfo>()
+            .Where(i => i.ID == id)
+            .FirstOrDefaultAsync();
+        }
+        public Task<int> SaveTrainerInfoAsync(TrainerInfo slist)
+        {
+            if (slist.ID != 0)
+            {
+                return database.UpdateAsync(slist);
+            }
+            else
+            {
+                return database.InsertAsync(slist);
+            }
+        }
+        public Task<int> DeleteTrainerInfoAsync(TrainerInfo slist)
+        {
+            return database.DeleteAsync(slist);
+        }
     }
+
 }

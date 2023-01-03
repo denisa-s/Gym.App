@@ -13,7 +13,7 @@
         <ShellContent Title="Borrowings" ContentTemplate="{DataTemplate views:Borrowings}" />
         <ShellContent Title="Categories" ContentTemplate="{DataTemplate views:Categories}" />
         <ShellContent Title="Clients" ContentTemplate="{DataTemplate views:Clients}" />
-        <ShellContent Title="Trainers" ContentTemplate="{DataTemplate views:Trainers}" />
         <ShellContent Title="My gyms" ContentTemplate="{DataTemplate local:GymEntryPage}" />
+        <ShellContent Title="My trainers" ContentTemplate="{DataTemplate local:TrainerEntryPage}" />
     </TabBar>
 </Shell>

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
 using Proiect1.Views;
-using Syncfusion.Maui.Core.Hosting;
 
 namespace Proiect1;
 
@@ -17,7 +16,6 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 		builder.Services.AddSingleton<LoginPage>();
-        builder.Services.AddSingleton<Trainers>();
         builder.Services.AddSingleton<Clients>();
         builder.Services.AddSingleton<GymPage>();
         return builder.Build();
