@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proiect1.ClientPage"
              Title="Client Page">
-    <VerticalStackLayout Spacing="10" Margin="10">
-        <StackLayout Margin="20">
-            <Editor Placeholder="Enter the name of the client" Text="{Binding FirstName}"
-                    HeightRequest="100" />
+    <VerticalStackLayout Spacing="1" Margin="5">
+        <StackLayout Margin="10" >
+            <Editor Placeholder="Enter the first name of the client" Text="{Binding FirstName}"
+                    HeightRequest="20"/>
+            <Editor Placeholder="Enter the last name of the client" Text="{Binding LastName}"
+                    HeightRequest="20" />
+            <Editor Placeholder="Enter the address of the client" Text="{Binding Address}"
+                    HeightRequest="20" />
+            <Editor Placeholder="Enter the email of the client" Text="{Binding Email}"
+                    HeightRequest="20" />
+            <Editor Placeholder="Enter the phone number of the client" Text="{Binding Phone}"
+                    HeightRequest="20" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />

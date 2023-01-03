@@ -6,11 +6,23 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add a client" Clicked="OnClientInfoAddedClicked" />
     </ContentPage.ToolbarItems>
-    <ListView x:Name="listView" Margin="20" ItemSelected="OnListViewItemSelected">
+    <ListView x:Name="listView" Margin="30" ItemSelected="OnListViewItemSelected" HorizontalScrollBarVisibility="Always">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding FirstName}" />
+                <ViewCell>
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="{Binding FirstName}"/>
+                            <Label Text="{Binding LastName}" />
+                            <Label Text="{Binding Address}"/>
+                            <Label Text="{Binding Email}" />
+                            <Label Text="{Binding Phone}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
+        
     </ListView>
+    
 </ContentPage>
