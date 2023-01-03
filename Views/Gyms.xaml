@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proiect1.Views.Gyms"
              Title="Gyms">
-    <VerticalStackLayout Spacing="10" Margin="10">
-        <HorizontalStackLayout Spacing="10">
-            <Image Source="shop_list.jpg" SemanticProperties.Description="My Gyms List" HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="My Gyms Lists" VerticalOptions="End" />
-            <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
-        </HorizontalStackLayout>
-        <Label Text="This app will help you to manage your Gyms" />
-    </VerticalStackLayout>
+    <StackLayout Margin="20">
+        <Editor Placeholder="Enter the description of the gym" Text="{Binding Description}"
+                    HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Save" Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
 </ContentPage>

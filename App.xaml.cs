@@ -2,9 +2,11 @@
 using Proiect1;
 using Proiect1.Database;
 using Proiect1.Views;
-
+using System;
+using System.IO;
 public partial class App : Application
 {
+    
     public App()
     {
         InitializeComponent();
