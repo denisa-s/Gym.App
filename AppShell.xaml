@@ -10,10 +10,12 @@
 
     <TabBar>
         <ShellContent Title="Home Page" ContentTemplate="{DataTemplate local:MainPage}" />
-        <ShellContent Title="Borrowings" ContentTemplate="{DataTemplate views:Borrowings}" />
-        <ShellContent Title="Categories" ContentTemplate="{DataTemplate views:Categories}" />
-        <ShellContent Title="Clients" ContentTemplate="{DataTemplate views:Clients}" />
         <ShellContent Title="My gyms" ContentTemplate="{DataTemplate local:GymEntryPage}" />
         <ShellContent Title="My trainers" ContentTemplate="{DataTemplate local:TrainerEntryPage}" />
+        <ShellContent Title="My clients" ContentTemplate="{DataTemplate local:ClientEntryPage}" />
+        <ShellContent Title="My subscriptions" ContentTemplate="{DataTemplate local:SubscriptionEntryPage}" />
+        <ShellContent Title="My categories" ContentTemplate="{DataTemplate local:CategoryEntryPage}" />
+      
+        
     </TabBar>
 </Shell>

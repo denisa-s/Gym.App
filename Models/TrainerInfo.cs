@@ -16,6 +16,6 @@ namespace Proiect1.Models
         public string LastName { get; set; }
         public string Phone { get; set; }
        // public List<TrainerCategory> TrainerCategories { get; set; }
-        //public ICollection<Gym>? Gyms { get; set; } //navigation property
+       //public ICollection<GymInfo> Gyms { get; set; } //navigation property
     }
 }

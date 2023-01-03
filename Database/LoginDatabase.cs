@@ -17,6 +17,9 @@ namespace Proiect1.Database
             database.CreateTableAsync<LoginModel>().Wait();
             database.CreateTableAsync<GymInfo>().Wait();
             database.CreateTableAsync<TrainerInfo>().Wait();
+            database.CreateTableAsync<ClientInfo>().Wait();
+            database.CreateTableAsync<Subscription>().Wait();
+            database.CreateTableAsync<CategoryInfo>().Wait();
         }
 
         public Task<LoginModel> GetLoginDataAsync(string userName)
@@ -81,6 +84,86 @@ namespace Proiect1.Database
         {
             return database.DeleteAsync(slist);
         }
-    }
+        public Task<List<ClientInfo>> GetClientInfosAsync()
+        {
+            return database.Table<ClientInfo>().ToListAsync();
+        }
+        public Task<ClientInfo> GetClientInfoAsync(int id)
+        {
+            return database.Table<ClientInfo>()
+            .Where(i => i.ID == id)
+            .FirstOrDefaultAsync();
+        }
+        public Task<int> SaveClientInfoAsync(ClientInfo slist)
+        {
+            if (slist.ID != 0)
+            {
+                return database.UpdateAsync(slist);
+            }
+            else
+            {
+                return database.InsertAsync(slist);
+            }
+        }
+        public Task<int> DeleteClientInfoAsync(ClientInfo slist)
+        {
+            return database.DeleteAsync(slist);
+        }
+        public Task<List<Subscription>> GetSubscriptionsAsync()
+        {
+            return database.Table<Subscription>().ToListAsync();
+        }
+        public Task<Subscription> GetSubscriptionAsync(int id)
+        {
+            return database.Table<Subscription>()
+            .Where(i => i.ID == id)
+            .FirstOrDefaultAsync();
+        }
+        public Task<int> SaveSubscriptionAsync(Subscription slist)
+        {
+            if (slist.ID != 0)
+            {
+                return database.UpdateAsync(slist);
+            }
+            else
+            {
+                return database.InsertAsync(slist);
+            }
+        }
+        public Task<int> DeleteSubscriptionAsync(Subscription slist)
+        {
+            return database.DeleteAsync(slist);
+        }
 
+        public Task<List<CategoryInfo>> GetCategoryInfosAsync()
+        {
+            return database.Table<CategoryInfo>().ToListAsync();
+        }
+        public Task<CategoryInfo> GetCategoryInfoAsync(int id)
+        {
+            return database.Table<CategoryInfo>()
+            .Where(i => i.ID == id)
+            .FirstOrDefaultAsync();
+        }
+        public Task<int> SaveCategoryInfoAsync(CategoryInfo slist)
+        {
+            if (slist.ID != 0)
+            {
+                return database.UpdateAsync(slist);
+            }
+            else
+            {
+                return database.InsertAsync(slist);
+            }
+        }
+        public Task<int> DeleteCategoryInfoAsync(CategoryInfo slist)
+        {
+            return database.DeleteAsync(slist);
+        }
+
+
+
+
+    }
+   
 }
