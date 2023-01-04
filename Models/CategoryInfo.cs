@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Proiect1.Models
         [PrimaryKey,AutoIncrement]
         public int ID { get; set; }
         public string CategoryName { get; set; }
-
-        //public List<TrainerCategory>? TrainerCategories { get; set; }
+        [OneToMany]
+        public List<TrainerCategory>? TrainerCategories { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,14 @@ namespace Proiect1.Models
         public decimal GymPrice { get; set; }
         public decimal GymReview { get; set; }
         public string GymPhone  { get; set; }
+        public string GymDetails
+        {
+            get
+            {
+                return GymName + ""+GymAddress;
+            } 
+        }
+        [OneToMany]
+        public List<Subscription> Subscriptions { get; set; }
     }
 }

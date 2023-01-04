@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Proiect1.Models;
 using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace Proiect1.Models
 {
@@ -13,10 +14,11 @@ namespace Proiect1.Models
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
+        [ForeignKey(typeof(ClientInfo))]
         public int? ClientID { get; set; }
-       // public ClientInfo? Client { get; set; } //navigation property
+  
+        [ForeignKey(typeof(GymInfo))]
         public int? GymID { get; set; }
-        //public GymInfo? Gym { get; set; }  //navigation property
         [DataType(DataType.Date)]
 
         [Display(Name = "Subscription expiration date")]

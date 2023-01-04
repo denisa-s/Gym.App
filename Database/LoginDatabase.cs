@@ -20,6 +20,7 @@ namespace Proiect1.Database
             database.CreateTableAsync<ClientInfo>().Wait();
             database.CreateTableAsync<Subscription>().Wait();
             database.CreateTableAsync<CategoryInfo>().Wait();
+            //database.CreateTableAsync<TrainerCategory>().Wait();
         }
 
         public Task<LoginModel> GetLoginDataAsync(string userName)
@@ -162,7 +163,39 @@ namespace Proiect1.Database
         }
 
 
-
+        /*public Task<List<TrainerCategory>> GetTrainerCategorysAsync()
+        {
+            return database.Table<TrainerCategory>().ToListAsync();
+        }*/
+        public Task<List<CategoryInfo>> GetTrainerCategorysAsync(int shoplistid)
+        {
+            return database.QueryAsync<CategoryInfo>(
+            "select P.ID, P.CategoryName from CategoryInfo P"
+            + " inner join TrainerCategory LP"
+            + " on P.ID = LP.CategoryID where LP.TrainerID = ?",
+            shoplistid);
+        }
+        public Task<TrainerCategory> GetTrainerCategoryAsync(int id)
+        {
+            return database.Table<TrainerCategory>()
+            .Where(i => i.ID == id)
+            .FirstOrDefaultAsync();
+        }
+        public Task<int> SaveTrainerCategoryAsync(TrainerCategory slist)
+        {
+            if (slist.ID != 0)
+            {
+                return database.UpdateAsync(slist);
+            }
+            else
+            {
+                return database.InsertAsync(slist);
+            }
+        }
+        public Task<int> DeleteTrainerCategoryAsync(TrainerCategory slist)
+        {
+            return database.DeleteAsync(slist);
+        }
 
     }
    

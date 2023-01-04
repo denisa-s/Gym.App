@@ -1,5 +1,6 @@
 ﻿using Proiect1.Views;
 using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -36,6 +37,7 @@ namespace Proiect1.Models
                 return FirstName + " " + LastName;
             }
         }
-        //public ICollection<Subscription>? Subscriptions { get; set; }
+        [OneToMany]
+        public List<Subscription>? Subscriptions { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,7 +16,7 @@ namespace Proiect1.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
-       // public List<TrainerCategory> TrainerCategories { get; set; }
-       //public ICollection<GymInfo> Gyms { get; set; } //navigation property
+        [OneToMany]
+        public List<TrainerCategory> TrainerCategories { get; set; }
     }
 }
