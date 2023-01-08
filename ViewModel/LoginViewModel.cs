@@ -36,7 +36,9 @@ namespace Proiect1.ViewModel
             {
                 if (string.Equals(loginData.Password, Password))
                 {
-                    await Navigation.PushModalAsync(new AppShell());
+                    //await Navigation.PushModalAsync(new AppShell());
+                    await App.Current.MainPage.DisplayAlert("succes", "Utilizator logat", "Ok");
+                    
                 }
                 else
                 {

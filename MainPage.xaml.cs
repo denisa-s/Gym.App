@@ -1,4 +1,6 @@
-﻿namespace Proiect1;
+﻿using Proiect1.Views;
+
+namespace Proiect1;
 
 public partial class MainPage : ContentPage
 {
@@ -20,5 +22,9 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
+    async void OnLoginClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new LoginPage());
+    }
 }
 

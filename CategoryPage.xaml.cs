@@ -20,4 +20,8 @@ public partial class CategoryPage : ContentPage
         await App.Database.DeleteCategoryInfoAsync(slist);
         await Navigation.PopAsync();
     }
+    async void OnBackClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CategoryEntryPage());
+    }
 }

@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proiect1.CategoryPage"
              Title="Category Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back" Clicked="OnBackClicked" />
+    </ContentPage.ToolbarItems>
     <VerticalStackLayout Spacing="10" Margin="10">
         <StackLayout Margin="20">
             <Editor Placeholder="Enter the name of the category" Text="{Binding CategoryName}"
