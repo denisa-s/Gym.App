@@ -57,7 +57,7 @@ namespace Proiect1.ViewModel
             lm.UserName = UserName;
             lm.Password = Password;
             App.Database.SaveLoginDataAsync(lm);
-            App.Current.MainPage.DisplayAlert("Success", "Registration uccessful", "Ok");
+            App.Current.MainPage.DisplayAlert("Success", "Registration successful", "Ok");
         }
     }
 }

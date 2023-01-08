@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proiect1.Views.LoginPage"
-             Title="LoginPage">
+             Title="Login Page">
     <ContentPage.Content>
         <Grid>
             <Image Source="gym.jpg" VerticalOptions="Fill" Aspect="Fill"/>
@@ -17,7 +17,7 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="User Name" FontSize="17" FontAttributes="Bold" TextColor="#2C363C"/>
+                <Label Grid.Row="0" Grid.Column="0" Text="Username" FontSize="17" FontAttributes="Bold" TextColor="#2C363C"/>
                 <Frame Grid.Row="1" Grid.Column="0" HeightRequest="50">
                     <Entry  Text="{Binding UserName}" BackgroundColor="White" HeightRequest="48"  WidthRequest="200"/>
                 </Frame>

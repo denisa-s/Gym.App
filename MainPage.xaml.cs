@@ -11,7 +11,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	/*private void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
 
@@ -21,7 +21,7 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Clicked {count} times";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+	}*/
     async void OnLoginClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new LoginPage());

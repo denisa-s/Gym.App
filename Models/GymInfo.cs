@@ -14,7 +14,7 @@ namespace Proiect1.Models
         public int GymId { get; set; }  
         public string GymName { get; set; }
         public string GymAddress { get; set; }
-        public decimal GymPrice { get; set; }
+        public int GymPrice { get; set; }
         public decimal GymReview { get; set; }
         public string GymPhone  { get; set; }
         public string GymDetails
