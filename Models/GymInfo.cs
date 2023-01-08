@@ -26,5 +26,6 @@ namespace Proiect1.Models
         }
         [OneToMany]
         public List<Subscription> Subscriptions { get; set; }
+        //public List<TrainerInfo> TrainerInfos { get; set; }
     }
 }
